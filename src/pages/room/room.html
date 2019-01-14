@@ -1,0 +1,37 @@
+<ion-content>
+  <div padding class="logo-container">
+  	<img src="../../assets/imgs/logo/logo.png" class="logo">
+  </div>
+  <ion-grid style="height: 100%;width:100%;">
+  	<ion-row align-items-center style="height: 100%">
+      <div style="width:100%;">
+        <div padding>
+          <h2 *ngIf="!event_name">AVAILABLE</h2>
+          <ion-row *ngIf="event_name">
+            <ion-col><span class="judul-title-event">CURRENT EVENT</span></ion-col>
+          </ion-row>
+          <ion-row *ngIf="event_name">
+            <ion-col col-2><span class="title-time">{{event_start_time}} - {{event_end_time}}</span></ion-col>
+            <ion-col col-10><h4 class="judul-event">{{event_name}}</h4></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><span class="judul-title-event">UPCOMING EVENT</span></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-2><span class="title-time">{{upcoming_start_time}} - {{upcoming_end_time}}</span></ion-col>
+            <ion-col col-10><h4 class="judul-event">{{upcoming_event_name}}</h4></ion-col>
+          </ion-row>
+        </div>
+      </div>
+  	  
+  	</ion-row>
+  </ion-grid>
+  <div class="card-container">
+  	<div class="room-container">
+  		<h3 class="room-name">{{roomName}}</h3>
+  	</div>
+  	<div class="clock-container">
+  	    <h3 class="clock-name">{{ clock | date:'HH:mm:ss'}}</h3>
+  	</div>
+  </div>
+</ion-content>

@@ -1,0 +1,66 @@
+page-room {
+  ion-content{
+	background:url(../../assets/imgs/slider/lima.jpg) no-repeat center center;
+	background-size: cover;
+  }
+  .logo-container{
+  	position: absolute;
+  	top:0px;
+  }
+  .logo{
+  	width:150px;
+  }
+  .title-event{
+  	font-weight: bold;
+  	color:#8c4545;
+
+  }
+  .card-container{
+  	  width:100%;
+  	  background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.0));
+  	  position: absolute;
+  	  bottom: 0px;
+  	  height: auto;
+  	  padding:10px;
+  	  padding-top: 50px;
+    }
+    .room-container{
+	  float:left;
+    }
+    h3{
+      color:white;
+      font-weight: bold;
+      font-size: 2.5em;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-transform: uppercase;
+      
+    }
+    .clock-container{
+    	float: right;
+    }
+    h2{
+    	font-size: 3.5em;
+    	font-weight: bold;
+    	color:#07ff13;
+    	padding-top: -10px;
+    	text-align: center !important;
+    }
+    h4{
+    	color:white;
+    	text-align: left;
+    }
+    .judul-title-event{
+    	font-size: .7em;
+    	color: white;
+    	font-weight: bold;
+    }
+    .judul-event{
+    	font-weight: bold;
+    	text-transform: uppercase;
+    }
+    .title-time{
+    	color:white;
+    	font-weight: bold;
+    }
+}

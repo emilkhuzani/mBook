@@ -1,14 +1,12 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-grid style="height: 100%">
+  	<ion-row justify-content-center align-items-center style="height: 100%">
+      <ion-item>
+  	    <ion-label color="primary" floating>SELECT ROOM</ion-label>
+  	      <ion-select #C interface="action-sheet" (ionChange)="onChange(C.value)">
+    	    <ion-option *ngFor="let item of rooms" value="{{item.room_id}}">{{item.room_name}}</ion-option>
+  	      </ion-select>
+        </ion-item>
+      </ion-row>
+  </ion-grid>
 </ion-content>
