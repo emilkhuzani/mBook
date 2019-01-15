@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/timeout';
+import { Insomnia } from '@ionic-native/insomnia';
 
 
 @IonicPage()
@@ -22,7 +23,8 @@ export class RoomPage {
   upcoming_event_name:string;
   upcoming_start_time:string;
   upcoming_end_time:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http:Http, private alertCtlr:AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http:Http, private alertCtlr:AlertController, private insomnia:Insomnia) {
+    this.keepAwake();
     this.roomId=this.navParams.get('room_id');
   	this.tick();
   	this.refreshClock();
@@ -30,6 +32,10 @@ export class RoomPage {
   	this.getEvent();
     this.getUpcoming();
   	this.refreshEvent();
+  }
+
+  keepAwake(){
+    this.insomnia.keepAwake().then();
   }
 
   ionViewDidLoad() {
